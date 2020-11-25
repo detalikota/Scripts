@@ -15,7 +15,7 @@ print(x) """
 """ 
 def a(msg):
     def b():
-        print ("LOG:", msg)
+        print ("LOG:", msg) 
     return b
 
 a = a("hi")
