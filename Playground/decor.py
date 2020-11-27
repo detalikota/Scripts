@@ -12,7 +12,7 @@ def print_text():
 print_text() """
 
 
-def func(original_function):
+""" def func(original_function):
   def wrapper(*args, **kwargs):
     print ("LUL")
     original_function(*args, **kwargs)
@@ -23,4 +23,6 @@ def func(original_function):
 def lul(name, age):
   print (name, age)
 
-lul("Magomed", 25)
+lul("Magomed", 25) """
+
+print (6/2)
