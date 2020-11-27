@@ -62,9 +62,9 @@ print (
 #UCS-FB-5010-S2
 print (
 "zone name UCSS"+s+"B-B"+n+"-5010S2-N1P2-vrem vsan 11"+
-"\nmember pwwn 50:05:07:68:0d:08:5c:be\nmember pwwn "+b+"\n"
+"\nmember pwwn 50:05:07:68:0D:08:BD:41\nmember pwwn "+b+"\n"
 "zone name UCSS"+s+"B-B"+n+"-5010S2-N2P2-vrem vsan 11"+
-"\nmember pwwn 50:05:07:68:0d:08:5c:bf\nmember pwwn "+b+"\n")
+"\nmember pwwn 50:05:07:68:0D:08:BD:42\nmember pwwn "+b+"\n")
 #UCS-FB-EMC
 print (
 "zone name UCSS"+s+"B-B"+n+"-EMC-A1P3-vrem vsan 11"+
