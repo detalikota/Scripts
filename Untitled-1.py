@@ -128,8 +128,11 @@ paladin = Ally('Paladin',6,6,15,25)
 king = Ally('King',15,15,40,1000)
 
 def encounter():
-    enemies = [rat,goblin,demon,dragon]
-    randomEnemy = choice(enemies,1,p=[0.4,0.3,0.2,0.1])
-    print ("{} attacked you!!!".format(randomEnemy.name))
+    enemies = [0,1,2,3]
+    random= choice(enemies,1,p=[0.4,0.3,0.2,0.1])
+    if random[0] == 0:
+        
+
+    print ("{} attacked you!!!".format(randomEnemyName[0]))
 encounter()
 print ("Game over!")
