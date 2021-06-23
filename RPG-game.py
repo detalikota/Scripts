@@ -1,4 +1,6 @@
 from numpy.random import choice
+from random import randint
+
 class Char:
     def __init__(self, spec, name, strength, magic, health, gold):
         self.spec = spec
@@ -131,8 +133,49 @@ def encounter():
     enemies = [0,1,2,3]
     random= choice(enemies,1,p=[0.4,0.3,0.2,0.1])
     if random[0] == 0:
-        
-
-    print ("{} attacked you!!!".format(randomEnemyName[0]))
-encounter()
+        enemy = rat
+    elif random[0] == 1:
+        enemy = goblin
+    elif random[0] == 2:
+        enemy = demon
+    elif random[0] == 3:
+        enemy = dragon
+    print ("{} attacked you!!!".format(enemy.name))
+    input()
+    while enemy.health > 0 and char.health > 0:
+        whoAttack = randint(0,1)
+        if whoAttack == 0:
+            print ("{} attacked you for {} damage".format(enemy.name, enemy.strength))
+            print ("You lost {} health".format(enemy.strength))
+            char.healthDown(enemy.strength)
+            if char.health > 0:
+                print ("You have {} health left".format(char.health))
+            else:
+                print ("You died!")
+        if whoAttack == 1:
+            print ("You attacked {} for {} damage".format(enemy.name, char.strength))
+            print ("{} lost {} health".format(enemy.name, char.strength))
+            enemy.healthDown(char.strength)
+            if enemy.health > 0:
+                print ("{} have {} health left".format(enemy.name, enemy.health))
+            else:
+                print ("{} died!".format(enemy.name))
+                if enemy == rat:
+                    print("You get 5 gold!")
+                    char.goldUp(5)
+                if enemy == goblin:
+                    print("You get 10 gold!")
+                    char.goldUp(10)
+                if enemy == demon:
+                    print("You get 20 gold!")
+                    char.goldUp(20)
+                if enemy == dragon:
+                    print("You get 50 gold!")
+                    char.goldUp(50)
+                    input()
+    
+while char.health>0:
+    encounter()
+    input()
+    
 print ("Game over!")
